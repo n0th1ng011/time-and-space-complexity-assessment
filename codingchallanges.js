@@ -3,7 +3,7 @@ let nums = [1, 3, 9, 5, 18, -5, 42]
 
 for(let i = 0; i < nums.length; i++) {
     for(let y = 0; y < nums.length; y++) {
-         {
+         if( y !== i) {
             if(nums[y] + nums[i] === 0) {
                 console.log(true)
             }
