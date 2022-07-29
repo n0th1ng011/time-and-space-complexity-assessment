@@ -1,0 +1,10 @@
+// extraLargeArray = doublerInsert (958.9305 ms), doublerAppend (9.7805 ms)
+// largeArray = doublerInsert (6.6283 ms), doublerAppend (624.026 μs)
+// mediumArray = doublerInsert (175.468 μs), doublerAppend (202.247 μs)
+// smallArray = doublerInsert (49.329 μs), doublerAppend (98.961 μs)
+// tinyArray = doublerInsert (37.998 μs), doublerAppend (92.579 μs)
+
+// The insert function seems to scale exponentially while the append function scales more linearly. The append function has much better scaling comparitively to the insert function. While both increase in time as the array size increases, there is a massive jump in the time it takes the insert function to complete the large and extra large arrays.
+
+//Extra Credit
+// The insert function is slower due to its usage of .unshift(), while .push() is similar in its operation to .unshift() there are aspects of the latter that add more processing time. While both have to run through the given array to find where to add in new data, .unshift() has to then move the whole array one index to add the new indexed data at the beginning of the array. As the size of the array increases, this adds even more time required for the insert function to process the arrays indexes as well as shifting all of that data one index over.
