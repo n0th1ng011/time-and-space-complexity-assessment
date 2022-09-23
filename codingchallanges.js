@@ -27,15 +27,17 @@ const addToZero = (array) => {
     return
 }
 
+//O(n)
+
 // 2. Unique Characters
 function hasUniqueChars(str){
     return new Set(str).size === str.length
 }
 console.log(hasUniqueChars('cat'))
 
+//O(n)
+
 // 3. Pengram Sentance
-
-
 const isPangram = (str) => {
     let pangramArray = str.toLowerCase().replace(/[^a-z]+/g, '').split('')
     let pangramSet = new Set()
@@ -50,9 +52,9 @@ const isPangram = (str) => {
     }
 
 }
+//O(n)
 
 // 4. Longest Word
-
 const findLongestWord = (arr) => {
     let longestCount = 0 
 
@@ -63,3 +65,4 @@ const findLongestWord = (arr) => {
     }
     console.log(longestCount)
 }
+//O(n)
